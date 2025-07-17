@@ -17,7 +17,7 @@
     "postpack": "rm ./LICENSE ./CHANGELOG.md"
   },
   "dependencies": {
-    "howdygo-pixel-core": "^5.1.0"
+    "howdygo-pixel-core": "^5.2.0"
   },
   "peerDependencies": {
     "next": ">=13.3.0"
