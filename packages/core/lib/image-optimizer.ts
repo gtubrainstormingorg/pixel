@@ -14,6 +14,15 @@ import {
 } from 'next/dist/server/config-shared';
 
 /* -----------------------------------------------------------------------------
+ * Global type augmentation for Node.js 14 polyfills
+ * ---------------------------------------------------------------------------*/
+
+declare global {
+  var fetch: typeof import('node-fetch').default | undefined;
+  var Headers: typeof import('node-fetch').Headers | undefined;
+}
+
+/* -----------------------------------------------------------------------------
  * Types
  * ---------------------------------------------------------------------------*/
 
@@ -93,11 +102,12 @@ class Pixel {
   constructor(options: PixelOptions) {
     // Create next config mock
     this.nextConfig = {
-      images:
-        {
-          ...defaultImageConfig,
-          ...options.imageConfig,
-        } ?? defaultImageConfig,
+      images: options.imageConfig
+        ? {
+            ...defaultImageConfig,
+            ...options.imageConfig,
+          }
+        : defaultImageConfig,
       experimental: {},
     } as unknown as NextConfigComplete;
 

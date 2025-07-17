@@ -1,7 +1,7 @@
 import * as http from 'http';
 import { parse as parseUrl } from 'url';
 
-import { Pixel, PixelOptions } from '@millihq/pixel-core';
+import { Pixel, PixelOptions } from 'howdygo-pixel-core';
 import {
   ImageOptimizerCache,
   sendResponse,
