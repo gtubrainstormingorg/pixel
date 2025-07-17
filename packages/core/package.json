@@ -1,5 +1,5 @@
 {
-  "name": "@millihq/pixel-core",
+  "name": "howdygo-pixel-core",
   "version": "5.1.0",
   "main": "./dist/image-optimizer.js",
   "types": "./dist/image-optimizer.d.ts",
