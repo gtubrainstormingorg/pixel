@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [5.2.0] - 2025-07-17
+
+- Add support for Node 18+
+
 ## [5.1.0] - 2023-04-11
 
 - Add support for Next.js `13.3+`
